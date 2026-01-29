@@ -10,7 +10,7 @@
 
 ## ✨ Features
 
-- **Real-time Ticker**: View live prices (BTC, ETH, SOL, DOGE) directly on the extension badge.
+- **Real-time Ticker**: View live prices (BTC, ETH, SOL, DOGE, **PAXG**, **XAUT**) directly on the extension badge.
 - **Volatility Alerts**:
   - 🚨 **Threshold Alerts**: Get notified when price changes by X% in Y minutes.
   - 🔊 **Audible Cues**: Distinct sounds for rapid Pumps (Rise) and Dumps (Fall).
