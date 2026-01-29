@@ -1,5 +1,7 @@
 # CryptoTick & Alert 🚀
 
+**中文** | [English](./README.md)
+
 <div align="center">
   <img src="https://via.placeholder.com/128/8B5CF6/FFFFFF?text=CT" alt="CryptoTick Logo" width="128" height="128" />
   <br/>
