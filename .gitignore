@@ -26,3 +26,7 @@ dist-ssr
 
 # Brain / Antigravity
 .gemini
+
+# Internal Docs
+X_THREADS_DRAFTS.md
+CHROME_STORE_COPY.md
