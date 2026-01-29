@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoTick Audio Preview</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Audio Preview</h1>
+    <p>The extension uses synthesized audio (code), not files.</p>
+    <p>Click below to hear exactly what they sound like:</p>
+
+    <button onclick="playAudio('rise')">▶️ Play RISE (Pump)</button>
+    <button onclick="playAudio('fall')">▶️ Play FALL (Dump)</button>
+
+    <script>
+        function playAudio(type) {
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+
+            const now = audioContext.currentTime;
+
+            if (type === 'rise') {
+                // "Sharper" rising tone
+                oscillator.type = 'sine';
+                oscillator.frequency.setValueAtTime(400, now);
+                oscillator.frequency.exponentialRampToValueAtTime(1500, now + 0.6);
+
+                gainNode.gain.setValueAtTime(0.3, now);
+                gainNode.gain.linearRampToValueAtTime(0, now + 0.6);
+
+                oscillator.start(now);
+                oscillator.stop(now + 0.6);
+
+            } else if (type === 'fall') {
+                // "Abyss" falling tone
+                oscillator.type = 'sawtooth';
+                oscillator.frequency.setValueAtTime(600, now);
+                oscillator.frequency.exponentialRampToValueAtTime(100, now + 1.0);
+
+                gainNode.gain.setValueAtTime(0.3, now);
+                gainNode.gain.linearRampToValueAtTime(0, now + 1.0);
+
+                oscillator.start(now);
+                oscillator.stop(now + 1.0);
+            }
+        }
+    </script>
+</body>
+
+</html>

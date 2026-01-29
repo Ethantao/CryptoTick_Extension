@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Force dark background default, but allow override */
+body {
+    @apply bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50;
+    margin: 0;
+}
