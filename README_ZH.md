@@ -1,4 +1,4 @@
-# CryptoTick & Alert (加密跳动) 🚀
+# CryptoTick & Alert (加密哨兵) 🚀
 
 **中文** | [English](./README.md)
 

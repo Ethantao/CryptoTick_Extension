@@ -31,7 +31,8 @@ CryptoTick & Alert is a professional browser extension designed for traders and 
 
 ## 中文版本
 
-**名称**: CryptoTick & Alert - 实时行情与波动预警
+**名称**: CryptoTick & Alert (加密哨兵) - 实时行情与波动预警
+
 **简介**: 浏览器图标实时显示币价，提供毫秒级波动预警与K线图表。支持币安(Binance)与欧易(OKX)。
 
 **详细描述**:
