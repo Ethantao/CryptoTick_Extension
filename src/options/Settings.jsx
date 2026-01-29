@@ -122,6 +122,8 @@ const Settings = () => {
                                     <option value="ETH">Ethereum (ETH)</option>
                                     <option value="SOL">Solana (SOL)</option>
                                     <option value="DOGE">Dogecoin (DOGE)</option>
+                                    <option value="PAXG">Gold (PAXG)</option>
+                                    <option value="XAUT">Gold (XAUT)</option>
                                 </select>
                             </div>
                         </div>
