@@ -1,12 +1,10 @@
 # CryptoTick & Alert (加密哨兵) 🚀
 
-**中文** | [English](./README.md)
+[English](./README.md) | **中文**
 
-<div align="center">
-  <img src="https://via.placeholder.com/128/8B5CF6/FFFFFF?text=CT" alt="CryptoTick Logo" width="128" height="128" />
-  <br/>
-  <strong>浏览器扩展图标上的实时加密货币报价与波动预警</strong>
-</div>
+![CryptoTick Banner](public/store_banner.png)
+
+**浏览器扩展图标上的实时加密货币报价与波动预警**
 
 ## ✨ 核心功能
 

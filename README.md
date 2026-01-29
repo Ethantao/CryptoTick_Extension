@@ -1,5 +1,7 @@
 # CryptoTick & Alert - Real-time Price Monitor 🚀
 
+**English** | [中文](./README_ZH.md)
+
 ![CryptoTick Banner](public/store_banner.png)
 
 **Real-time crypto prices on your extension icon, smart volatility alerts, and professional candlestick charts.**
