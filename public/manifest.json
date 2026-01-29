@@ -1,8 +1,9 @@
 {
     "manifest_version": 3,
-    "name": "CryptoTick & Alert",
+    "name": "__MSG_app_name__",
     "version": "1.0.0",
-    "description": "Real-time crypto prices on the extension icon with volatility alerts.",
+    "description": "__MSG_app_description__",
+    "default_locale": "en",
     "permissions": [
         "storage",
         "alarms",

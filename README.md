@@ -1,56 +1,81 @@
-# CryptoTick & Alert (加密哨兵) 🚀
+# CryptoTick & Alert - Real-time Price Monitor 🚀
 
-[中文](./README_ZH.md) | **English**
+![CryptoTick Banner](public/store_banner.png)
 
-<div align="center">
-  <img src="https://via.placeholder.com/128/8B5CF6/FFFFFF?text=CT" alt="CryptoTick Logo" width="128" height="128" />
-  <br/>
-  <strong>Real-time Crypto Prices & Volatility Alerts on your Browser Extension Icon.</strong>
-</div>
+**Real-time crypto prices on your extension icon, smart volatility alerts, and professional candlestick charts.**
+Designed for traders and hodlers who need to stay updated without constantly switching tabs.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome-Web%20Store-blue)](https://chrome.google.com/webstore/detail/YOUR_EXTENSION_ID)
+
+---
 
 ## ✨ Features
 
-- **Real-time Ticker**: View live prices (BTC, ETH, SOL, DOGE, **PAXG**, **XAUT**) directly on the extension badge.
-- **Volatility Alerts**:
-  - 🚨 **Threshold Alerts**: Get notified when price changes by X% in Y minutes.
-  - 🔊 **Audible Cues**: Distinct sounds for rapid Pumps (Rise) and Dumps (Fall).
-- **Interactive Charts**: Built-in lightweight candlestick chart (1m, 15m, 1h, 4h, 1d).
-- **Multi-Exchange**: Supports **Binance** and **OKX** data sources.
-- **Web3 UI**: Sleek, dark-mode first design with glassmorphism aesthetics.
-- **Pin Mode**: "Always on Top" panel mode for dedicated monitoring.
-- **Privacy First**: No data collection, direct connection to Exchange APIs.
+* **📈 Real-time Badge Price**: View live prices (BTC, ETH, SOL, DOGE) directly on your browser toolbar icon. Green for up, red for down.
+* **🔔 Smart Volatility Alerts**: Set custom thresholds (e.g., "Alert me if BTC moves 2% in 1 minute").
+* **🔊 Distinct Audio Cues**: Hear the difference between a **Pump** (Sharp Rise) and a **Dump** (Deep Fall) instantly.
+* **📊 Interactive K-Line Chart**: Built-in professional candlestick chart with multiple timeframes (1m, 5m, 15m, 1h, 4h, 1d).
+* **🔄 Dual Exchange Support**: Toggle between **Binance** and **OKX** data sources seamlessly.
+* **📌 Pin Mode**: Detach the popup into a minimalist "Always on Top" window for dedicated monitoring.
+* **🛡️ Privacy First**: No tracking, no analytics. Connects directly to public exchange APIs.
 
-## 📥 Installation
+---
 
-### Chrome Web Store
+## 🛠️ Installation
 
-*(Link coming soon!)*
+### From Chrome Web Store
+
+*(Link coming soon once reviewed)*
 
 ### Manual Installation (Developer Mode)
 
-1. Clone this repository.
-2. Run `npm install` to install dependencies.
-3. Run `npm run build` to generate the `dist` folder.
-4. Open Chrome and go to `chrome://extensions`.
-5. Enable "Developer mode" (top right).
-6. Click "Load unpacked" and select the `dist` folder.
+1. Download the latest [Release](https://github.com/Ethantao/CryptoTick_Extension/releases).
+2. Unzip the file.
+3. Open Chrome and navigate to `chrome://extensions/`.
+4. Enable **Developer mode** (top right toggle).
+5. Click **Load unpacked**.
+6. Select the unzipped folder.
 
-## 🛠️ Tech Stack
+---
 
-- **Framework**: React + Vite
-- **Styling**: TailwindCSS
-- **Charts**: Lightweight Charts (TradingView)
-- **State**: Chrome Storage API
-- **Icons**: Simple Icons (Binance) & Logomark (OKX)
+## ⚙️ Configuration
 
-## 🤝 Support
+Click the **Settings** icon in the popup to customize:
 
-If you find this tool useful, consider buying me a coffee! ☕
+* **Target Asset**: Choose from BTC, ETH, SOL, DOGE, PAXG (Gold), etc.
+* **Data Source**: Binance or OKX.
+* **Alert Thresholds**: Set volatility percentage and time window.
+* **Theme**: Light / Dark mode (or follow system).
+* **Color Theme**: Switch between Global Standard (Green Up/Red Down) and East Asian Standard (Red Up/Green Down).
 
-- **USDT (TRC20)**: `TWfvtQvcThPR5XwRQpawWi8KXrUpx4o5Ha`
-- **SOL**: `AhQWJnxBunp6bvwDgUFFF2xXUZQphowjmu3rcvMwZdwi`
-- **ETH**: `0x9aa47cdc031f7191abc9c31f8eeeec297e32f955`
+---
+
+## 🔒 Privacy Policy
+
+We prioritize your privacy.
+
+* **No Data Collection**: We do not collect or store any personal user data.
+* **Local Storage**: Settings are stored locally on your device (`chrome.storage`).
+* **Direct Connection**: The extension connects directly to Binance/OKX public APIs. No middleman servers.
+
+See full [Privacy Policy](PRIVACY.md).
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## 📄 License
 
-MIT License © 2026 CryptoTick
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+**Enjoying CryptoTick?** Give us a ⭐ on GitHub!

@@ -46,7 +46,11 @@ const Settings = () => {
         setTimeout(() => setCopied(null), 2000);
     };
 
-    const t = translations[settings.language] || translations.en;
+    const t = (key) => {
+        const lang = settings.language || 'en';
+        const dict = translations[lang] || translations.en;
+        return dict[key] || key;
+    };
 
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 flex items-center justify-center p-4 font-sans selection:bg-purple-500/30 transition-colors duration-300">
@@ -66,7 +70,7 @@ const Settings = () => {
                         <h1 className="text-3xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-blue-600 dark:from-purple-400 dark:to-blue-400 bg-clip-text text-transparent">
                             CryptoTick
                         </h1>
-                        <p className="text-zinc-500 text-sm mt-1">{t.subtitle}</p>
+                        <p className="text-zinc-500 text-sm mt-1">{t('subtitle')}</p>
                     </div>
                     <div className="flex bg-zinc-100 dark:bg-black/40 rounded-lg p-1 border border-zinc-200 dark:border-white/5 text-zinc-500">
                         <button
@@ -89,14 +93,14 @@ const Settings = () => {
                         <div className="flex gap-1">
                             <button
                                 onClick={() => handleChange('theme', 'light')}
-                                title={t.light}
+                                title={t('light')}
                                 className={`p-1.5 rounded-md transition-all ${settings.theme === 'light' ? 'bg-white dark:bg-zinc-800 text-yellow-500 shadow-sm' : 'text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300'}`}
                             >
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                             </button>
                             <button
                                 onClick={() => handleChange('theme', 'dark')}
-                                title={t.dark}
+                                title={t('dark')}
                                 className={`p-1.5 rounded-md transition-all ${settings.theme === 'dark' ? 'bg-white dark:bg-zinc-800 text-purple-500 shadow-sm' : 'text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300'}`}
                             >
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
@@ -108,10 +112,10 @@ const Settings = () => {
                 {/* Theme & Data Source */}
                 <div className="space-y-6">
 
-                    <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-500 pl-1">{t.dataSource}</h3>
+                    <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-500 pl-1">{t('dataSource')}</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                            <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">{t.asset}</label>
+                            <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">{t('asset')}</label>
                             <div className="flex gap-2">
                                 <select
                                     value={settings.asset}
@@ -129,7 +133,7 @@ const Settings = () => {
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">{t.exchange}</label>
+                            <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">{t('exchange')}</label>
                             <select
                                 value={settings.exchange}
                                 onChange={(e) => handleChange('exchange', e.target.value)}
@@ -143,7 +147,7 @@ const Settings = () => {
 
                     <div className="mt-4">
                         <div className="space-y-1.5">
-                            <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">{t.backupInterval}</label>
+                            <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">{t('backupInterval')}</label>
                             <input
                                 type="number"
                                 min="5"
@@ -151,18 +155,18 @@ const Settings = () => {
                                 onChange={(e) => handleChange('refreshInterval', Math.max(5, parseInt(e.target.value) || 5))}
                                 className="flex h-10 w-full rounded-md border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 px-3 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500/50 transition-all"
                             />
-                            <p className="text-xs text-zinc-500">{t.backupWarning}</p>
+                            <p className="text-xs text-zinc-500">{t('backupWarning')}</p>
                         </div>
                     </div>
                 </div>
 
                 {/* Alerts */}
                 <div className="space-y-4">
-                    <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-500 pl-1">{t.alerts}</h3>
+                    <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-500 pl-1">{t('alerts')}</h3>
                     <div className="p-4 rounded-xl border border-zinc-200 dark:border-white/5 bg-zinc-50 dark:bg-white/5 space-y-6">
                         <div className="grid grid-cols-2 gap-4">
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">{t.threshold}</label>
+                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">{t('threshold')}</label>
                                 <div className="relative">
                                     <input
                                         type="number" step="0.1"
@@ -172,10 +176,10 @@ const Settings = () => {
                                     />
                                     <span className="absolute right-3 top-2 text-zinc-500 text-xs">%</span>
                                 </div>
-                                <p className="text-xs text-zinc-500 mt-1">{t.thresholdDesc}</p>
+                                <p className="text-xs text-zinc-500 mt-1">{t('thresholdDesc')}</p>
                             </div>
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">{t.timeWindow}</label>
+                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">{t('timeWindow')}</label>
                                 <div className="relative">
                                     <input
                                         type="number" min="1"
@@ -185,18 +189,18 @@ const Settings = () => {
                                     />
                                     <span className="absolute right-3 top-2 text-zinc-500 text-xs">min</span>
                                 </div>
-                                <p className="text-xs text-zinc-500 mt-1">{t.timeWindowDesc}</p>
+                                <p className="text-xs text-zinc-500 mt-1">{t('timeWindowDesc')}</p>
                             </div>
                         </div>
 
                         <div className="space-y-4 pt-2 border-t border-zinc-200 dark:border-white/5">
                             <Toggle
-                                label={t.enableSound}
+                                label={t('enableSound')}
                                 checked={settings.alertsEnabled.sound}
                                 onChange={() => handleChange('alertsEnabled', { ...settings.alertsEnabled, sound: !settings.alertsEnabled.sound })}
                             />
                             <Toggle
-                                label={t.desktopNotification}
+                                label={t('desktopNotification')}
                                 checked={settings.alertsEnabled.notification}
                                 onChange={() => handleChange('alertsEnabled', { ...settings.alertsEnabled, notification: !settings.alertsEnabled.notification })}
                             />
@@ -206,26 +210,26 @@ const Settings = () => {
 
                 {/* Appearance */}
                 <div className="space-y-4">
-                    <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-500 pl-1">{t.appearance}</h3>
+                    <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-500 pl-1">{t('appearance')}</h3>
                     <div className="grid grid-cols-2 gap-4">
                         <div
                             onClick={() => handleChange('colorTheme', 'green-up')}
                             className={`cursor-pointer rounded-xl border p-4 transition-all ${settings.colorTheme === 'green-up' ? 'border-purple-500/50 bg-purple-500/10' : 'border-zinc-200 dark:border-white/10 bg-zinc-50 dark:bg-black/20 hover:bg-zinc-100 dark:hover:bg-white/5'}`}
                         >
-                            <div className="text-sm font-bold text-zinc-900 dark:text-white mb-2">{t.globalStandard}</div>
+                            <div className="text-sm font-bold text-zinc-900 dark:text-white mb-2">{t('globalStandard')}</div>
                             <div className="flex gap-3 font-mono text-xs">
-                                <span className="text-emerald-500 dark:text-emerald-400">▲ {t.up}</span>
-                                <span className="text-rose-500 dark:text-rose-400">▼ {t.down}</span>
+                                <span className="text-emerald-500 dark:text-emerald-400">▲ {t('up')}</span>
+                                <span className="text-rose-500 dark:text-rose-400">▼ {t('down')}</span>
                             </div>
                         </div>
                         <div
                             onClick={() => handleChange('colorTheme', 'red-up')}
                             className={`cursor-pointer rounded-xl border p-4 transition-all ${settings.colorTheme === 'red-up' ? 'border-purple-500/50 bg-purple-500/10' : 'border-zinc-200 dark:border-white/10 bg-zinc-50 dark:bg-black/20 hover:bg-zinc-100 dark:hover:bg-white/5'}`}
                         >
-                            <div className="text-sm font-bold text-zinc-900 dark:text-white mb-2">{t.eastAsian}</div>
+                            <div className="text-sm font-bold text-zinc-900 dark:text-white mb-2">{t('eastAsian')}</div>
                             <div className="flex gap-3 font-mono text-xs">
-                                <span className="text-rose-500 dark:text-rose-400">▲ {t.up}</span>
-                                <span className="text-emerald-500 dark:text-emerald-400">▼ {t.down}</span>
+                                <span className="text-rose-500 dark:text-rose-400">▲ {t('up')}</span>
+                                <span className="text-emerald-500 dark:text-emerald-400">▼ {t('down')}</span>
                             </div>
                         </div>
                     </div>
@@ -242,7 +246,7 @@ const Settings = () => {
                     <div className="relative p-5 z-10 ml-0.5 mt-0.5 mr-0.5 mb-0.5">
                         <div className="flex items-center justify-between mb-4">
                             <div>
-                                <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">{t.buyCoffee}</h3>
+                                <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">{t('buyCoffee')}</h3>
                                 <p className="text-xs text-zinc-500 mt-1">Support development & updates.</p>
                             </div>
                             <div className="flex gap-2 relative">
@@ -326,7 +330,7 @@ const CopyRow = ({ label, value, copied, onCopy, t }) => (
             onClick={onCopy}
             className={`ml-2 px-2 py-1 rounded text-[10px] font-bold uppercase transition-colors shrink-0 ${copied ? 'bg-green-500 text-white dark:text-black' : 'bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-300 dark:hover:bg-zinc-700'}`}
         >
-            {copied ? t.copied : t.copy}
+            {copied ? t('copied') : t('copy')}
         </button>
     </div>
 );

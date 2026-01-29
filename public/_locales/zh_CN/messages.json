@@ -1,0 +1,98 @@
+{
+    "app_name": {
+        "message": "加密哨兵 (CryptoTick & Alert)"
+    },
+    "app_description": {
+        "message": "浏览器图标实时显示币价，提供毫秒级波动预警与K线图表。"
+    },
+    "title": {
+        "message": "CryptoTick 设置"
+    },
+    "subtitle": {
+        "message": "实时价格追踪与波动预警"
+    },
+    "dataSource": {
+        "message": "数据来源"
+    },
+    "asset": {
+        "message": "目标资产"
+    },
+    "exchange": {
+        "message": "交易所"
+    },
+    "backupInterval": {
+        "message": "自动刷新间隔 (秒)"
+    },
+    "backupWarning": {
+        "message": "最小 5 秒。在使用自定义资产或 WebSocket 失败时使用。"
+    },
+    "alerts": {
+        "message": "预警设置"
+    },
+    "threshold": {
+        "message": "阈值 (%)"
+    },
+    "thresholdDesc": {
+        "message": "当价格变化幅度达到此百分比时触发。"
+    },
+    "timeWindow": {
+        "message": "时间窗口 (分钟)"
+    },
+    "timeWindowDesc": {
+        "message": "在此时间范围内计算价格变化。"
+    },
+    "enableSound": {
+        "message": "启用音效"
+    },
+    "desktopNotification": {
+        "message": "桌面通知"
+    },
+    "appearance": {
+        "message": "外观设置"
+    },
+    "theme": {
+        "message": "主题模式"
+    },
+    "system": {
+        "message": "跟随系统"
+    },
+    "light": {
+        "message": "浅色模式"
+    },
+    "dark": {
+        "message": "深色模式"
+    },
+    "globalStandard": {
+        "message": "国际标准 (绿涨红跌)"
+    },
+    "eastAsian": {
+        "message": "东亚标准 (红涨绿跌)"
+    },
+    "up": {
+        "message": "涨"
+    },
+    "down": {
+        "message": "跌"
+    },
+    "buyCoffee": {
+        "message": "请我喝杯咖啡"
+    },
+    "cryptoDonations": {
+        "message": "加密货币捐赠"
+    },
+    "copied": {
+        "message": "已复制!"
+    },
+    "copy": {
+        "message": "复制"
+    },
+    "save": {
+        "message": "保存"
+    },
+    "saved": {
+        "message": "已保存"
+    },
+    "loading": {
+        "message": "加载中..."
+    }
+}

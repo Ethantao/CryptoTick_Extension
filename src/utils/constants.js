@@ -11,7 +11,7 @@ export const DEFAULT_SETTINGS = {
     },
     colorTheme: 'green-up', // 'green-up' (Western) or 'red-up' (Eastern)
     refreshInterval: 10, // seconds (fallback)
-    language: 'en', // 'en' or 'zh'
+    language: navigator.language.startsWith('zh') ? 'zh' : 'en', // Auto-detect default, but adaptable
     theme: 'dark', // 'light', 'dark'
 };
 

@@ -1,39 +1,40 @@
 # Privacy Policy for CryptoTick & Alert
 
-**Last updated:** January 29, 2026
+**Last Updated: January 29, 2026**
 
-**CryptoTick & Alert** ("we", "us", or "our") is dedicated to protecting your privacy. This Privacy Policy explains what information we collect, how we use it, and your rights.
+This Privacy Policy describes how CryptoTick & Alert ("we", "us", or "our") collects, uses, and discloses information, and what choices you have with respect to the information.
 
-## 1. Data Collection
+## 1. Information Collection and Use
 
-We **DO NOT** collect, store, or share any personal data or user-identifiable information.
+**We do NOT collect, store, or transmit any personal data.**
 
-- **No Analytics:** We do not use Google Analytics or any third-party tracking software.
-- **No User Profiles:** We do not create user profiles or track your browsing history.
-- **No Cookies:** We do not store any cookies on your device.
+* **No Analytics**: We do not use Google Analytics or any third-party tracking software.
+* **No User Accounts**: The extension functions entirely without user registration or login.
+* **Local Storage**: User preferences (such as selected asset, exchange source, and alert thresholds) are stored locally on your device using `chrome.storage.local`. This data never leaves your browser.
 
-## 2. Permissions & Data Usage
+## 2. Permissions
 
-The extension strictly uses permissions to perform its core functions:
+We request the minimum permissions necessary for the extension to function:
 
-- **Storage (`storage`):** Used locally on your device to save your settings (e.g., selected pair, theme preference, alert thresholds).
-- **Alarms (`alarms`):** Used to schedule background checks for price alerts.
-- **Notifications (`notifications`):** Used to display system notifications when a price alert is triggered.
-- **Offscreen (`offscreen`):** Used to play alert sounds in the background.
+* **`storage`**: Used solely to save your local settings (e.g., whether you want to track BTC or ETH).
+* **`alarms`**: Used as a fallback timer to fetch price updates if the WebSocket connection is interrupted.
+* **`notifications`**: Used to display system notifications when a price volatility alert is triggered based on your custom thresholds.
+* **`offscreen`**: Used strictly to play audio alert sounds ("Pump" or "Dump" effects) in the background.
 
-## 3. External Services
+## 3. Data Transmission
 
-This extension connects directly to public APIs provided by cryptocurrency exchanges to fetch real-time price data:
+The extension connects directly to the public APIs of the following cryptocurrency exchanges to fetch real-time price data:
 
-- **Binance API**
-- **OKX API**
+* **Binance**: `wss://stream.binance.com:9443` and `https://api.binance.com`
+* **OKX**: `wss://ws.okx.com:8443` and `https://www.okx.com`
 
-When fetching data, your IP address is visible to these third-party services as part of a standard HTTP/WebSocket request. We do not control how these third parties handle your IP address, but we send no other personal data to them.
+These connections are made directly from your browser to the exchange. Your IP address may be visible to these exchanges as part of the standard HTTP/WebSocket connection process, but we do not intercept or route this traffic through any intermediate servers.
 
-## 4. Open Source
+## 4. Remote Code
 
-This project is open-source. You can inspect the full source code on [GitHub](https://github.com/Ethantao/CryptoTick_Extension) to verify that no data collection code exists.
+This extension does **not** execute any remote code. All logic is contained within the extension package installed on your browser.
 
-## 5. Contact
+## 5. Contact Us
 
-If you have any questions about this Privacy Policy, please contact us via our [GitHub Issues](https://github.com/Ethantao/CryptoTick_Extension/issues).
+If you have any questions about this Privacy Policy, please contact us via our GitHub repository:
+[https://github.com/Ethantao/CryptoTick_Extension](https://github.com/Ethantao/CryptoTick_Extension)

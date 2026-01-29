@@ -1,0 +1,98 @@
+{
+    "app_name": {
+        "message": "CryptoTick & Alert"
+    },
+    "app_description": {
+        "message": "Real-time crypto prices on the extension icon with volatility alerts."
+    },
+    "title": {
+        "message": "CryptoTick Settings"
+    },
+    "subtitle": {
+        "message": "Real-time price tracking and volatility alerts"
+    },
+    "dataSource": {
+        "message": "Data Source"
+    },
+    "asset": {
+        "message": "Target Asset"
+    },
+    "exchange": {
+        "message": "Exchange"
+    },
+    "backupInterval": {
+        "message": "Auto Refresh Interval (Seconds)"
+    },
+    "backupWarning": {
+        "message": "Minimum 5s. Used when using Custom Asset or when WebSocket fails."
+    },
+    "alerts": {
+        "message": "Alerts"
+    },
+    "threshold": {
+        "message": "Threshold (%)"
+    },
+    "thresholdDesc": {
+        "message": "Trigger alert if price changes exactly by this %."
+    },
+    "timeWindow": {
+        "message": "Time Window (Min)"
+    },
+    "timeWindowDesc": {
+        "message": "Calculate change within this many minutes."
+    },
+    "enableSound": {
+        "message": "Enable Sound"
+    },
+    "desktopNotification": {
+        "message": "Desktop Notification"
+    },
+    "appearance": {
+        "message": "Appearance"
+    },
+    "theme": {
+        "message": "Theme"
+    },
+    "system": {
+        "message": "System"
+    },
+    "light": {
+        "message": "Light"
+    },
+    "dark": {
+        "message": "Dark"
+    },
+    "globalStandard": {
+        "message": "Global Standard"
+    },
+    "eastAsian": {
+        "message": "East Asian"
+    },
+    "up": {
+        "message": "Up"
+    },
+    "down": {
+        "message": "Down"
+    },
+    "buyCoffee": {
+        "message": "Buy Me a Coffee"
+    },
+    "cryptoDonations": {
+        "message": "Crypto Donations"
+    },
+    "copied": {
+        "message": "Copied!"
+    },
+    "copy": {
+        "message": "Copy"
+    },
+    "save": {
+        "message": "Save"
+    },
+    "saved": {
+        "message": "Saved"
+    },
+    "loading": {
+        "message": "Loading..."
+    }
+}
