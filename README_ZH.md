@@ -22,7 +22,7 @@
 
 ### Chrome 应用商店
 
-*(链接即将上线)*
+[前往 Chrome 应用商店下载](https://chromewebstore.google.com/detail/cryptotick-alert/hbbecbhfmhhmhimaaamgljmhokaihkpo)
 
 ### 手动安装 (开发者模式)
 

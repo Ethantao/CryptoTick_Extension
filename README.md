@@ -8,7 +8,7 @@
 Designed for traders and hodlers who need to stay updated without constantly switching tabs.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Chrome Web Store](https://img.shields.io/badge/Chrome-Web%20Store-blue)](https://chrome.google.com/webstore/detail/YOUR_EXTENSION_ID)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome-Web%20Store-blue)](https://chromewebstore.google.com/detail/cryptotick-alert/hbbecbhfmhhmhimaaamgljmhokaihkpo)
 
 ---
 
@@ -28,7 +28,7 @@ Designed for traders and hodlers who need to stay updated without constantly swi
 
 ### From Chrome Web Store
 
-*(Link coming soon once reviewed)*
+[Download from Chrome Web Store](https://chromewebstore.google.com/detail/cryptotick-alert/hbbecbhfmhhmhimaaamgljmhokaihkpo)
 
 ### Manual Installation (Developer Mode)
 
